@@ -1,0 +1,714 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+}
+
+.group-box{
+    width: 100%;
+    height: 40px;
+    background: dodgerblue;
+    border-bottom:1px solid white;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    color: white;
+}
+
+.group-img-box{
+    width: 40px;
+    margin: 0 20px;
+    height: 70%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.group-img-box > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.members-text{
+    color: white;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+display: flex;
+}
+
+.profile-chat-user{
+    width: 100%;
+    height: 50px;
+    background: dodgerblue;
+    border-radius: 0 0 5px 5px;
+    display: none;
+    align-items: center;
+color: white;
+position: absolute;
+top: 0;
+}
+
+.profile-chat-user > div{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+padding: 0 10px;
+}
+
+.btn-back-to-users{
+    font-size: 18px;
+}
+
+.avatar-chat-user-box{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.user-chat-info-box{
+    display: flex;
+    align-items: center;
+}
+
+.avatar-chat-user-box > img{
+    width: 100%;
+    height: 100%;
+}
+
+.box-users{
+    width: 40%;
+    height: 100%;
+    border-left: 1px solid gray;
+    border-bottom: 1px solid gray;
+    overflow: auto;
+}
+
+.profile-box{
+    width: 100%;
+    padding: 7px;
+    height: 50px;
+    background: dodgerblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.profile-img-box{
+    width: 8%;
+    border-radius: 50%;
+    overflow: hidden;
+width: 30px;
+    height: 70%;
+}
+
+.profile-img{
+    object-fit: contain;
+height: 100%;
+width: 100%;
+    background: white;
+    cursor: pointer;
+}
+
+.btn-edit-profile{
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.search-box{
+    width: 100%;
+    height: 30px;
+    background-color: dodgerblue;
+    padding: 20px 0 ;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-box > input{
+    width: 100%;
+    /* height: 100%; */
+    padding: 5px ;
+background-color: dodgerblue;
+border: 1px solid white;
+border-radius: 5px;
+color: white;
+outline: none;
+}
+
+.search-input-btn{
+    position: absolute;
+    right: 10px;
+    color: white;
+}
+
+.circle-box-control{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+    position: fixed;
+    z-index: 3;
+    right: 0;
+    bottom: 40px;
+    font-size: 10px;
+}
+
+.edit-profile-box-circle{
+    padding: 20px;
+    border-radius: 50%;
+background: dodgerblue;
+color: white;
+display: none;
+align-items: center;
+justify-content: center;
+}
+
+.circle-add-group{
+    padding: 20px;
+    border-radius: 50%;
+    background-color: dodgerblue;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+cursor: pointer;
+}
+
+.create-group-box{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+z-index: 1;
+}
+
+.group-control-box{
+    width: 40%;
+    height: 50%;
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.close-group-box{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 5px 0 0;
+    font-size: 18px;
+}
+
+.create-control-box{
+    width: 100%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.new-group-avatar-box{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid black;
+    overflow: hidden;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 18px;
+cursor: pointer;
+position: relative;
+margin: 5px 0;
+}
+
+.select-new-photo-group{
+    position: absolute;
+    opacity: none;
+    z-index: -1;
+}
+
+.group-create-input-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 50%;
+}
+
+.group-create-input-box > input{
+    outline: none;
+    padding: 7px 5px;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+.btn-create-group{
+    padding: 5px 0;
+    color: white;
+    background: dodgerblue;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-create-group:hover{
+    background: aqua;
+    transition: 0.5s;
+}
+
+.background-shadow-box{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+background: black;
+opacity: 0.5;
+z-index: 1;
+}
+
+.profile-edit-box{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+z-index: 1;
+}
+.close-edit-box{
+    width: 40%;
+}
+.profile-text{
+    width: 40%; 
+display: flex;
+justify-content: center;
+    background: white;
+}
+.profile-change-input-box{
+    width: 40%;
+    height: 50%;
+    display: flex;
+    border-radius: 0 0 8px 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+
+.edit-profile-username{
+    width: 60%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid gray;
+}
+
+.btn-edit-profile-submit{
+    width: 60%;
+    padding: 5px 0;
+    color: white;
+    background: dodgerblue;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.profile-username-box{
+    width: 55%;
+    display: flex;
+    justify-content: flex-start;
+   align-items: center;
+}
+
+.profile-username{
+    font-weight: 600;
+    font-size: 18px;
+    
+}
+
+.users{
+    overflow: auto;
+    width: 100%;
+}
+
+.users > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    cursor: pointer;
+border-bottom: 2px solid gray;
+}
+
+.users > div:hover{
+    background: rgb(237, 237, 237);
+    border-radius: 5px;
+border-color: gray;
+}
+
+.username-box{
+    width: 10%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+
+.username-box > img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border: 1px solid gray;
+    border-radius: 50%;
+}
+
+.chat-box{
+    width: 60%;
+    height: 100%;
+}
+
+.chat-box > div{
+    width: 100%;
+}
+
+.box-messages{
+    height: 92%;
+    overflow-y: auto;
+width: 100%;
+border: 1px solid gray;
+border-bottom: 0px;
+background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhNMAtzvZfXYqJv3CIfzU8kFnwma2vzgEkTICLNwHr3sAmv8rmljoeUrmRy373Uho-gO8&usqp=CAU);
+background-position: center;
+}
+
+.box-messages > div:first-child{
+    margin-top: 50px;
+} 
+
+.row-message{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+margin: 20px 0;
+}
+
+.row-message{
+    width: 100%;
+    display: flex;
+justify-content: flex-start;
+}
+
+.message{
+display: flex;
+justify-content: flex-start;
+align-items: center;
+width: 50%;
+}
+.row-message-own{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+
+.message-box{
+    width: 90%;
+    background: black;
+    border-radius: 7px;
+    color: white;
+    padding: 2px;
+}
+
+.message-own{
+display: flex;
+justify-content: flex-end;
+align-items: center;
+width: 50%;
+}
+
+.message-img{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+}
+
+.message-own-img{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+}
+
+
+.img-box-own{
+    height: 220px;
+    background: chartreuse;
+    width: 100%;
+    overflow: hidden;
+}
+
+.img-box{
+    height: 220px;
+    background: black;
+    width: 100%;
+    overflow: hidden;
+}
+
+.mes-img {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.mes-img > img{
+    width: 100%;
+    height:95%;
+}
+
+.mes-img > video{
+    width: 100%;
+    height:100%;
+}
+
+.message-box-own{
+    width: 95%;
+    background: chartreuse;
+    border-radius: 7px 7px  0  0;
+    color: white;
+    padding: 5px;
+}
+
+
+
+.date-box{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.message-date{
+    color: black;
+}
+
+.text-box{
+    width: 100%;
+    padding: 5px;
+    overflow: hidden ;
+}
+
+.text-box > span {
+    outline: none;
+      color: white;
+}
+
+.message-controller{
+    width: 95%;
+    display: flex;
+    justify-content: flex-end;
+    background: dodgerblue;
+    border-radius: 0 0 7px 7px;
+}
+
+.img-controller{
+    border-radius: 0 0 7px 7px;
+    width: 100%;
+    display: flex;
+    background: chartreuse;
+    justify-content: flex-end;
+}
+
+.message-controller button{
+    font-size: 14px;
+cursor: pointer;
+background: none;
+border: none;
+outline: none;
+padding:  2px;
+}
+
+.message-avatar{
+    min-width: 15%;
+height: 40px;
+}
+
+.message-avatar > img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid gray;
+}
+
+.controller-messages{
+    height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid gray;
+}
+
+
+.input-box{
+    width: 60%;
+    position: relative;
+}
+
+.input-box > input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding: 8px 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.input-box > input:focus{
+    border: 2px solid dodgerblue;
+}
+
+.micro-btn{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.file-box{
+    position: relative;
+margin: 0 5px;
+}
+
+.input-file{
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.file-count{
+    padding: 1px 5px;
+    background-color: chartreuse;
+    border-radius: 50%;
+    font-size: 13px;
+    color: white;
+}
+
+.btn-send-message{
+    margin: 0 5px;
+    padding:  8px 10px;
+    border: none;
+    outline: none;
+    background: dodgerblue;
+    border-radius: 50%;
+    color: white;
+cursor: pointer;
+}
+
+.img-show-box{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.btn-close-img-box{
+    position: absolute;
+    right: 0;
+    top: 0;
+padding: 5px 20px;
+border: 1px solid white;
+color: white;
+}
+
+.img-show-box > div{
+    width: 50%;
+    height: 100%;
+}
+
+.img-messages{
+    width: 100%;
+    object-fit: contain;
+    height: 100%;
+}
+
+@media only screen and (max-width: 550px){
+    body{
+        height: 90vh;
+    }
+    .box-users{
+width: 100%;
+    }
+
+    .close-edit-box{
+        width: 100%;
+    }
+    .profile-change-input-box{
+        height: 100%;
+        width: 100%;
+    }
+    .group-control-box{
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    .chat-box{
+        display: none;
+        width: 100%;
+    }
+    .box-messages{
+        height: 100%;
+    }
+
+    .message-avatar{
+        width: 20%;
+        height: 30px;
+    }
+
+    .profile-text{
+        width: 100%; 
+        background: white;
+    }
+    .edit-profile-box-circle{
+        display: flex;
+    }
+    .controller-messages{
+        height: 11%;
+    }
+    .input-box{
+        width: 70%;
+    }
+    .input-box > input{
+        padding: 10px;
+    }
+    .micro-btn{
+        right: 5px;
+        top: 8px;
+    }
+}
